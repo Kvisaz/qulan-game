@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    Разметка дизайна для игры:
+
+    Допускаются любые теги, классы, id
+
+    Где вы поставите спецзнак, там и будет выводиться:
+
+    @title - заголовок локации
+    @text  - описание
+    @choice - текст выбора
+    @paramLabel - метка параметра для вывода на экран(в автовыводе параметров)
+    @paramValue - значение параметра (в автовыводе параметров)
+
+    Вывод параметров
+    <param>paramName</param> - в таком и только таком виде. paramName - имя параметра в игре
+
+    Шаблоны для повторяющихся элементов
+    <choice></choice> - все внутри будет использовано как повторяющийся кусок кода для показа варианта
+    <param-label></param-label> - все внутри будет использовано как повторяющийся кусок кода для показа параметров с заданным текстом для вывода на экран
+    <backlink></backlink> - все внутри будет использовать как шаблон для показа ссылки "Вернуться"
+
+    ! Внимание! Редактировать можно только внутри тега <div id="source">
+-->
+<div id="source">
+    <backlink><span id="choice-back">[Вернуться] </span></backlink>
+    <div id="screen-page">
+    <div id="title"><h1>@title</h1></div>
+    <div id="content"><div id="text">@text</div>
+        <ol id="choices">
+            <choice><li>@choice</li></choice>
+        </ol></div>
+    <div id="params">
+        <div class="node-param-gold">Золото игрока: <b><param-name>playerGold</param-name></b></div>
+        <div class="node-param-health">Здоровье: <b><param-name>playerHealth</param-name></b></div>
+        <div class="node-param-health">Домов в 1 городе: <b><param-name>town1.houses</param-name></b></div>
+        <div class="node-param-health"><b><param-name>unusedParam</param-name></b></div>
+    </div>
+    </div>
+</div>
+<script src="src-loader.js"></script>
+</body>
+</html>

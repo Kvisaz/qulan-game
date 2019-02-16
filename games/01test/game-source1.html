@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Source </title>
+</head>
+<body><pre id="source">
+
+// Первая игра
+
+// инициализация параметры, только с помощью знака равно
+// @param $paramName = paramValue
+@param $day = 1
+@param $world = "Земля"
+@param $playerHealth = 100 @label Здоровье
+@param $playerGold = 0 @label Золото
+@param $playerLives = 3
+@param $draculaGold = 100
+@param $draculaHealth = 1000
+@param $draculaWives = 1
+@param $draculaCastles = 23
+
+@param $town1 = {}; $town1.houses = 14;
+
+// ид локации можно писать на русском
+#Трактир : Трактир Пьяное Яблоко
+    @style light
+В трактире шумно и пахнет пивом.  // описание локации
+* Улица : Выйти на улицу @param $playerGold = $playerGold  + 10; $playerHealth = $playerHealth + 10;
+    // с первой звездочки - переменный контент
+    // todo 1 сделать func для сложных вычислений параметров
+    // todo 2 в блоке же func сделать вторичную инициализацию параметров
+
+* @if $playerGold>=100 @end Замок: Ты теперь богат и можешь войти в замок! @param $isRich = 1;
+
+#Улица
+    @style dark
+На улице темно. Подозрительные тени маячат на углу.
+* Трактир : Войти в трактир
+* Церковь : Войти в церковь
+* @oneway Замок
+
+#Церковь
+    @style light
+В окне церкви горит свеча. Похоже, там кто-то есть.
+
+#Замок
+    @style light
+Башни старого замка возвышаются над городом, как мрачные скалы.
+</pre><script src="src-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+    transition: 1500ms;
+}
+
+.node-param-gold {
+    font-size: 16px;
+}
+
+#node-param-bar {
+    font-size: 16px;
+}
+
+/****  стили локаций *****/
+
+/*  dark */
+#dark {
+    background: black;
+}
+
+/*  light */
+#light {
+    background: #d3d6dc;
+}

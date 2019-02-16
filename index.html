@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML page sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- базовая тема CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!-- подключите здесь свой CSS-->
+    <link rel="stylesheet" href="games/01test/game.css">
+</head>
+<body >
+<div id="game"></div>
+
+<!-- дефолтный html дизайн игры -->
+<div class="display-none" id="design">
+    <backlink><span id="choice-back">[Вернуться] </span></backlink>
+    <div id="screen-page">
+        <div id="title"><h1>@title</h1></div>
+        <div id="content"><div id="text">@text</div>
+            <ol id="choices">
+                <choice><li>@choice</li></choice>
+            </ol></div>
+        <div id="params">
+            <div class="node-param-gold">Золото игрока: <b><param-name>playerGold</param-name></b></div>
+            <div class="node-param-health">Здоровье: <b><param-name>playerHealth</param-name></b></div>
+            <div class="node-param-health">Домов в 1 городе: <b><param-name>town1.houses</param-name></b></div>
+            <div class="node-param-health"><b><param-name>unusedParam</param-name></b></div>
+        </div>
+    </div>
+</div>
+
+<!-- отредактируйте config.js, чтобы подключить исходник игры -->
+<script src="./config.js"></script>
+<script type="text/javascript" src="index.js"></script></body>
